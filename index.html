@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://unpkg.com/d3-simple-slider"></script>
+    <script src="main.js"></script>
+    <title>COVID-19: A Data-Driven Journey</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sticky-container">
+            <div class="sticky-content">
+
+                <!-- Starting Scene -->
+                <section class="step full-page" id="intro">
+                    <div class="content">
+                        <h1>COVID-19: A Data-Driven Journey Through the Pandemic</h1>
+                        <p>
+                            In late 2019, the world witnessed the emergence of a novel coronavirus that would soon
+                            challenge every facet of our global society. This interactive journey delves into the data
+                            behind the COVID-19 pandemic, unraveling the stories and impacts that numbers alone cannot
+                            convey.
+                        </p>
+                        <p>
+                            Join us as we explore the spread, the surges, the human toll, and the global response to a
+                            crisis that reshaped our world. Through dynamic visuals and insightful analysis, we aim to
+                            provide a comprehensive understanding of the pandemic's trajectory and its profound effects
+                            on humanity.
+                        </p>
+                    </div>
+                    <div class="intro-image">
+                        <img src="intro.png" alt="Global impact of COVID-19">
+                    </div>
+                </section>
+
+
+                <!-- Visual 1 -->
+                <section class="step full-page" id="step1">
+                    <div class="content">
+                        <h2>The Global Surge: COVID-19's Early Spread</h2>
+                        <p>
+                            Witness how COVID-19 evolved from isolated cases to a worldwide pandemic. This interactive
+                            map chronicles the virus's spread over time, showing the escalation of cases in each
+                            country. Spikes on the map represent total cases in each country at a given time—higher
+                            spikes indicate more cases. Use the slider to navigate through key moments and observe how
+                            the epicenters
+                            shifted across the globe, highlighting the rapid and unprecedented impact of the outbreak.
+                        </p>
+                    </div>
+                    <div class="slider-container">
+                        <div id="slider"></div>
+                    </div>
+                    <div id="visual1" class="visual"></div>
+                </section>
+
+
+
+
+                <!-- Visual 2 -->
+                <section class="step full-page" id="step2">
+                    <div class="content">
+                        <h2>The Race of the Pandemic: Tracking the Surge of COVID-19 Cases</h2>
+                        <p>
+                            Witness the dynamic shifts in the global landscape of the COVID-19 pandemic through this
+                            animated bar chart. This visualization showcases the top 15 countries with the highest total
+                            confirmed cases for each month since the outbreak began.
+                        </p>
+                        <p>
+                            Watch as countries rise and fall in the rankings, reflecting rapid changes in the pandemic's
+                            epicenters over time. Use the <strong>Play/Pause</strong> button to control the animation at
+                            your own pace, and the <strong>Reset</strong> button to restart the visualization or focus
+                            on specific moments. The length of each bar represents the total number of confirmed cases
+                            for that country in a given month, providing a clear understanding of the scale and speed at
+                            which COVID-19 spread across different regions.
+                        </p>
+                    </div>
+                    <div class="button-container">
+                        <button id="playPauseBtn">Play/Pause</button>
+                        <button id="reset">Reset</button>
+                    </div>
+                    <div id="visual2" class="visual"></div>
+                </section>
+
+
+                <!-- Visual 3 -->
+                <section class="step full-page" id="step3">
+                    <div class="content">
+                        <h2>A Calendar of Lives: Visualizing Daily COVID-19 Impact</h2>
+                        <p>
+                            Explore the daily toll of the COVID-19 pandemic through this interactive calendar heatmap.
+                            Each square represents a day, colored to reflect the number of total deaths reported on that
+                            date. Select a country from the dropdown menu to observe how the pandemic unfolded over time
+                            in different regions.
+                        </p>
+                    </div>
+                    <div id="dropdown-container">
+                        <label for="visual3-dropdown">Select Country:</label>
+                        <select name="Select Country" id="visual3-dropdown"></select>
+                    </div>
+                    <div id="visual3" class="visual"></div>
+                </section>
+
+
+                <!-- Visual 4 -->
+                <section class="step full-page" id="step4">
+                    <div class="content-visual-container">
+                        <div class="content">
+                            <h2>The Global Web of COVID-19: Visualizing the Pandemic's Reach</h2>
+                            <p>
+                                Explore the intricate network of COVID-19's impact across the globe with this
+                                interactive bubble chart. At the center lies the <strong>"World"</strong>, branching out
+                                to each continent, which further connects to individual countries. The size of each
+                                bubble represents the number of COVID-19 cases per million people, highlighting the
+                                relative impact on each region.
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Hierarchical Structure:</strong> The chart illustrates the hierarchical
+                                    relationship from the global level to continents and then to countries, showcasing
+                                    how the pandemic cascaded through different regions.
+                                </li>
+                                <li>
+                                    <strong>Color-Coded Continents:</strong> Each continent is represented by a distinct
+                                    color, with lighter shades used for countries within that continent. This color
+                                    scheme visualizes geographical groupings and emphasizes regional patterns.
+                                </li>
+                                <li>
+                                    <strong>Interactive Exploration:</strong> Hover over any bubble to see detailed
+                                    information about that region's cases per million. Zoom and pan to explore different
+                                    areas of the chart, and drag nodes to rearrange them for a customized view.
+                                </li>
+                            </ul>
+                            <p>
+                                This visualization reveals the interconnectedness of the pandemic's spread, emphasizing
+                                how COVID-19 transcended borders and affected nations worldwide.
+                            </p>
+                        </div>
+                        <div id="visual4" class="visual"></div>
+                    </div>
+                </section>
+
+                <!-- Visual 5 -->
+                <section class="step full-page" id="step5">
+                    <div class="content">
+                        <h2>Global Vaccination Progress: An Interactive Exploration</h2>
+                        <p>
+                            Explore the worldwide COVID-19 vaccination efforts with this interactive sunburst chart.
+                            Navigate from the global level down to continents and individual countries to see how
+                            vaccination rates compare across regions. Click on a country to reveal a radial bar chart
+                            that highlights the proportion of its population that has been vaccinated.
+                        </p>
+                    </div>
+                    <div id="visual5" class="visual"></div>
+                </section>
+
+
+                <!-- Ending Scene -->
+                <section class="step full-page" id="conclusion">
+                    <div class="content">
+                        <h2>Reflecting on a Global Challenge: Lessons and Hope</h2>
+                        <p>
+                            Our journey through the data has highlighted the unparalleled challenges posed by the
+                            COVID-19 pandemic. Beyond the statistics are stories of resilience, innovation, and unity as
+                            nations and individuals navigated uncertainty.
+                        </p>
+                        <p>
+                            As we move forward, these insights not only deepen our understanding of this global event
+                            but also equip us with knowledge and preparedness for future challenges. The pandemic has
+                            underscored the importance of collaboration, transparency, and swift action in the face of
+                            global health crises.
+                        </p>
+                        <p>
+                            Thank you for joining us on this data-driven exploration. Together, we can learn from the
+                            past to build a healthier, more resilient future.
+                        </p>
+                    </div>
+                    <div class="conclusion-image">
+                        <img src="conclusion.png" alt="Hope for the future">
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="tooltip"></div>
+</body>
+
+</html>
