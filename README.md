@@ -1,4 +1,4 @@
-# Animesh-Sanjay-Sashrik-Siddarth-Sudhanva
+# Animesh
 
 
 How to run the project:
